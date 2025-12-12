@@ -19,10 +19,14 @@ export function AuthProvider({ children }) {
   }, [user])
 
   const login = async ({ email, password }) => {
-    if (!email || !password) throw new Error('Credenciales inválidas')
-    const fake = { id: 'u1', email }
-    setUser(fake)
-    return fake
+    // VALIDACIÓN REAL (simulada)
+    if (email !== "admin" || password !== "admin123") {
+      throw new Error("Usuario o contraseña incorrectos")
+    }
+
+    const adminUser = { id: "u1", email: "admin", role: "admin" }
+    setUser(adminUser)
+    return adminUser
   }
 
   const logout = () => setUser(null)

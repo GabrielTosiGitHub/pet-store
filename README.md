@@ -70,3 +70,40 @@ npm install
 
 # 3. Ejecutar en modo desarrollo
 npm run dev
+
+
+Luego abrir la URL que te dé Vite, por ejemplo:
+👉 http://localhost:5173
+🧾 Build para producción
+npm run build
+
+
+🔐 Autenticación (Login Simulado)
+
+El sistema de login está simulado, pero con credenciales fijas para acceso al panel de administración.
+Solamente los administradores pueden gestionar productos (crear, editar y eliminar).
+
+Credenciales de administrador:
+
+Usuario: admin
+Contraseña: admin123
+
+
+Si los datos son incorrectos, el sistema mostrará un mensaje de error.
+
+🌐 Deploy
+
+Este proyecto está preparado para ser desplegado fácilmente en Netlify:
+
+Build command: npm run build
+
+Publish directory: dist/
+
+📦 Backend simulado (MockAPI)
+
+Los productos se obtienen desde un endpoint configurado en MockAPI.
+El CRUD está completamente implementado usando Axios.
+
+📜 Licencia
+
+Proyecto académico. Uso libre para fines educativos.
